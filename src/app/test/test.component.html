@@ -1,3 +1,41 @@
+<h2>{{title}}</h2>
 <p>
-  test works!
-</p>
+  New hero:
+  <input id="name" type="text" #box
+  (keyup.enter)="addHero(box.value); box.value=''"
+  placeholder="hero name"
+  [(ngModel)]="name">
+
+  
+  <input id="country" type="text" #box
+  placeholder="job country"
+  [(ngModel)]="country">
+
+  </p>
+
+  <p>
+  <input id="mutate" type="checkbox" [(ngModel)]="mutate">Mutate array
+
+  <button (click)="reset()">Reset</button>
+  </p>
+
+
+  
+  <h4>Jobs by city (piped)</h4>
+  <div id="countrylist">
+
+    <input id="countrysearch" type="text" #box 
+    placeholder="country"
+    [(ngModel)]="countrysearch">
+
+    <div *ngFor="let hero of (heroes | jobsfilter:countrysearch)">
+      {{hero.name}}
+    </div>
+  </div>
+  
+  <h4>All Heroes (no pipe)</h4>
+  <div id="all">
+    <div *ngFor="let hero of heroes">
+      {{hero.name}}
+    </div>
+  </div>

@@ -17,12 +17,17 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { JoblistComponent } from './joblist/joblist.component';
 
+import {JobsFilterPipe, JobsFilterImpurePipe} from './shared/jobsfilter.pipe';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    JoblistComponent
+    JoblistComponent,
+    JobsFilterPipe,
+    JobsFilterImpurePipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,9 @@ import { JoblistComponent } from './joblist/joblist.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
