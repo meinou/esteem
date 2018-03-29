@@ -5,9 +5,9 @@ import { Job } from './jobs_';
 
 @Pipe({ name: 'jobsfilter' })
 export class JobsFilterPipe implements PipeTransform {
-  transform(allHeroes: Job[], country: string) {
+  transform(allJobs: Job[], country: string) {
    // this.country = country;
-    return allHeroes.filter(hero => hero.country.toLowerCase() == country);
+    return allJobs.filter(job => job.country.toLowerCase() == country);
   }
 }
 

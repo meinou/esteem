@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { JOBS } from '../shared/jobs_';
 
+
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -10,31 +12,31 @@ import { JOBS } from '../shared/jobs_';
 export class TestComponent {
 
   heroes: any[] = [];
-  canFly = true;
+  jobs: any[] = [];
   mutate = true;
-  title = 'Flying Heroes (pure pipe)';
+  title = 'JobsFilter (pure pipe)';
   country:'';
 
   constructor() { this.reset(); }
 
-  addHero(name: string) {
+  addJob(name: string, country:string) {
     name = name.trim();
     if (!name) { return; }
    // var country = this.country.trim();
-    let hero = {name, country: this.country};
+    let job = {name, country};
 
 
     if (this.mutate) {
     // Pure pipe won't update display because heroes array reference is unchanged
     // Impure pipe will display
-    this.heroes.push(hero);
+      this.jobs.push(job);
     } else {
       // Pipe updates display because heroes array is a new object
-      this.heroes = this.heroes.concat(hero);
+      this.jobs = this.jobs.concat(job);
     }
   }
 
-  reset() { this.heroes = JOBS.slice(); }
+  reset() { this.jobs = JOBS.slice(); }
 }
 
   

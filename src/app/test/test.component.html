@@ -2,8 +2,8 @@
 <p>
   New hero:
   <input id="name" type="text" #box
-  (keyup.enter)="addHero(box.value); box.value=''"
-  placeholder="hero name"
+  (keyup.enter)="addJob(box.value, country); box.value=''"
+  placeholder="job title"
   [(ngModel)]="name">
 
   
@@ -11,6 +11,7 @@
   placeholder="job country"
   [(ngModel)]="country">
 
+  <button (click)="addJob(name, country)">Add Job</button>
   </p>
 
   <p>
@@ -19,7 +20,9 @@
   <button (click)="reset()">Reset</button>
   </p>
 
+<hr>
 
+<hr>
   
   <h4>Jobs by city (piped)</h4>
   <div id="countrylist">
@@ -28,14 +31,14 @@
     placeholder="country"
     [(ngModel)]="countrysearch">
 
-    <div *ngFor="let hero of (heroes | jobsfilter:countrysearch)">
-      {{hero.name}}
+    <div *ngFor="let job of (jobs | jobsfilter:countrysearch)">
+      {{job.name}}
     </div>
   </div>
   
-  <h4>All Heroes (no pipe)</h4>
+  <h4>All Jobs (no pipe)</h4>
   <div id="all">
-    <div *ngFor="let hero of heroes">
-      {{hero.name}}
+    <div *ngFor="let job of jobs">
+      {{job.name}}
     </div>
   </div>

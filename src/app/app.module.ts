@@ -16,6 +16,7 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { JoblistComponent } from './joblist/joblist.component';
+//import {JobListComponent } from './test/job-list.component';
 
 import {JobsFilterPipe, JobsFilterImpurePipe} from './shared/jobsfilter.pipe';
 import { FormsModule } from '@angular/forms';
@@ -27,7 +28,8 @@ import { HttpModule } from '@angular/http';
     TestComponent,
     JoblistComponent,
     JobsFilterPipe,
-    JobsFilterImpurePipe
+    JobsFilterImpurePipe,
+    //JobListComponent
   ],
   imports: [
     BrowserModule,
