@@ -1,7 +1,7 @@
 [
-    {"name": "Windstorm", "canFly": true},
-    {"name": "Bombasto",  "canFly": false},
-    {"name": "Magneto",   "canFly": false},
-    {"name": "Tornado",   "canFly": true}
+    {"name": "Web developer", "country": "usa"},
+    {"name": "Designr",  "country": "france"},
+    {"name": "Manager",   "country": "usa"},
+    {"name": "Administrator",   "country": "france"}
   ]
   

@@ -16,11 +16,13 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { JoblistComponent } from './joblist/joblist.component';
-//import {JobListComponent } from './test/job-list.component';
+import {JobListComponentJSON  } from './test/job-list.component';
 
 import {JobsFilterPipe, JobsFilterImpurePipe} from './shared/jobsfilter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HeroListComponent } from './test/hero-list.component';
+import {FetchJsonPipe} from './shared/fetch-json.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HttpModule } from '@angular/http';
     JoblistComponent,
     JobsFilterPipe,
     JobsFilterImpurePipe,
-    //JobListComponent
+    HeroListComponent,
+    FetchJsonPipe,
+    JobListComponentJSON 
   ],
   imports: [
     BrowserModule,

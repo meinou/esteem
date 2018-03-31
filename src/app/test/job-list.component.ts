@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-job-list',
+  selector: 'app-job-list-json',
   template: `
-    <h2>Heroes from JSON File</h2>
+    <h2>Jobs from JSON File</h2>
 
-    <div *ngFor="let hero of ('assets/jobs.json' | fetch) ">
-      {{hero.name}}
+    <div *ngFor="let job of ('assets/jobs.json' | fetch) ">
+      {{job.name}} <span> in {{ job.country}} </span>
     </div>
 
-    <p>Heroes as JSON:
-      {{'assets/heroes.json' | fetch | json}}
+    <p>Jobs as JSON:
+      {{'assets/jobs.json' | fetch | json}}
     </p>`
 })
-export class JobListComponent { }
+export class JobListComponentJSON { }
