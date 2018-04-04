@@ -12,5 +12,8 @@ export class JobService {
   getJobs(): Job[] {
     return JOBS;
   }
+  getJob(id: number): Job {
+    return JOBS.filter((job) => (job.id === id))[0];
+  }
 
 }

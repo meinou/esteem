@@ -1,10 +1,10 @@
 export interface Job { country: string; }
 
 export const JOBS =  [
-  {name: 'Web designer', country: 'USA'},
-  {name: 'Developer',  country: 'France'},
-  {name: 'Manager',   country: 'France'},
-  {name: 'HR manager',   country: 'USA'}
+  {id: 0, name: 'Web designer', country: 'USA', description: "desine for life"},
+  {id: 1, name: 'Developer',  country: 'France', description: "code, test & rock-n-roll"},
+  {id: 2, name: 'Manager',   country: 'France', description: "how to become a CEO?"},
+  {id: 3, name: 'HR manager',   country: 'USA', description: "Hire me"}
 ];
 
 

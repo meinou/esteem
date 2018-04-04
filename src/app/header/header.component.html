@@ -1,0 +1,26 @@
+<mat-toolbar class="header">
+  <span><img src="/assets/images/logo.png" height=30 width=30></span>
+  <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
+  <a mat-button routerLink="/profile" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Profile</a>
+  <a mat-button routerLink="/contacts" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+
+</mat-toolbar>
+
+<div class="container jumbotron"
+    fxLayout="row"
+    fxLayout.sm="column" 
+    fxLayout.xs="column" 
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center" 
+    fxLayoutAlign.gt-sm="center center" 
+    fxLayoutGap="10px">
+
+  <div fxFlex fxFlex.gt-sm="50%">
+    <h1>Find your dream job</h1>
+    <p>Or refer your friend for his! Keep eye on updates!</p>
+  </div>
+  <div fxFlex fxFlex.gt-sm="20%">
+    <img src="./assets/images/logo.png" height="70" alt="Logo">
+  </div>
+  <div fxFlex></div>
+</div>

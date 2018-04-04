@@ -9,12 +9,13 @@
         <mat-card-content>
 
             <mat-list>
-              <mat-list-item *ngFor="let job of jobs">
-                  <p mat-line>  {{job.name }} </p>
+              <mat-list-item *ngFor="let job of jobs" [routerLink]="['/jobdetail', job.id]">
+                  <p mat-line>  {{job.name }}  <span> {{ job.id }}</span></p>
 
               </mat-list-item>
             </mat-list>
         </mat-card-content>
 
   </mat-card>
+
 </div>

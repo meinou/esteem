@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import {JOBS} from '../shared/jobs_'
+import {Job} from '../shared/job';
+import {JobService} from '../services/job.service';
+
+import { JobdetailComponent } from '../jobdetail/jobdetail.component';
 
 @Component({
   selector: 'app-joblist',
@@ -9,10 +12,16 @@ import {JOBS} from '../shared/jobs_'
 })
 export class JoblistComponent implements OnInit {
 
-  jobs = JOBS;
-  constructor() { }
+  jobs : Job[]; //= JOBS;
+  selectedJob: Job;
+  
+  constructor(private jobService: JobService) { }
 
   ngOnInit() {
+    this.jobs = this.jobService.getJobs();
   }
 
+  onSelect(job: Job) {
+    this.selectedJob = job;
+  }
 }

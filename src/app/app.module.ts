@@ -21,8 +21,19 @@ import {JobListComponentJSON  } from './test/job-list.component';
 import {JobsFilterPipe, JobsFilterImpurePipe} from './shared/jobsfilter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HeroListComponent } from './test/hero-list.component';
 import {FetchJsonPipe} from './shared/fetch-json.pipe';
+
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ProfileComponent } from './profile/profile.component';
+import { JobdetailComponent } from './jobdetail/jobdetail.component';
+import { HeroListComponent } from './test/hero-list.component';
+
+import {JobService} from './services/job.service';
+
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +44,12 @@ import {FetchJsonPipe} from './shared/fetch-json.pipe';
     JobsFilterImpurePipe,
     HeroListComponent,
     FetchJsonPipe,
-    JobListComponentJSON 
+    JobListComponentJSON,
+    HeaderComponent,
+    FooterComponent,
+    ContactsComponent,
+    ProfileComponent,
+    JobdetailComponent 
   ],
   imports: [
     BrowserModule,
@@ -45,9 +61,10 @@ import {FetchJsonPipe} from './shared/fetch-json.pipe';
     MatCardModule,
     MatButtonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [JobService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

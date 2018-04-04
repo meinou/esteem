@@ -1,0 +1,16 @@
+
+  <div fxFlex="100" *ngIf="job">
+    <h1> {{ job.name }} , {{ job.country }}</h1>
+    <div >
+      <p>{{ job.description }}</p>
+    </div>
+    <mat-card-actions>
+      <button mat-buttonn (click)="goBack()">BACK</button>
+      <button mat-buttonn>Refer Friend</button>
+      <button mat-buttonn>Apply</button>
+  </mat-card-actions>
+  </div>
+
+
+
+

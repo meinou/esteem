@@ -11,3 +11,39 @@ body {
     margin: 20px;
     display: flex;
 }
+
+$lt-gray: #A8C074;
+$background-dark: #F4A996;
+$othercolor: #F3542C;
+$anothercolor: #7899AA;
+$background-light: #F0F0F0;
+$background-pale:  #A8C074;
+
+
+$primary-color-dark:   #F3542C;
+$primary-color:        #F4A996;
+$primary-color-light:  #F0F0F0;
+$primary-color-text:   #7899AA;
+$accent-color:         #FFC107;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.background-primary {
+    background-color: $background-dark!important;
+  }
+.background-accent {
+    background-color: $accent-color!important;
+  }
+.text-floral-white {
+    color: floralwhite!important;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
